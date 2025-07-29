@@ -57,6 +57,7 @@ export default function SendMessage() {
     try {
       const response = await axios.post('/api/suggest-messages');
       const data = response.data;
+      console.log(data);
 
       // If returned as a plain string with delimiter
       const suggestions = typeof data === 'string'
